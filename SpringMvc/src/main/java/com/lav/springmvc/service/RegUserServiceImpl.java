@@ -2,19 +2,19 @@ package com.lav.springmvc.service;
 
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("regUserServiceImpl")
 public class RegUserServiceImpl implements IUserService{
 
-	@Override
-	public void setUserName(String name) {
-		// TODO Auto-generated method stub
-		
-	}
+	String userName;
+	String password;
 
-	@Override
-	public String displayUserName() {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean proccess(String uName, String password) {
+		if ((uName.isEmpty() || uName.equals("null")) && (password.isEmpty() || password.equals("null"))){
+			userName = uName;
+			this.password = password;
+			System.out.println("UserName:"+uName+"\n Password : "+password);
+			return true;
+		}
+		return false;
 	}
-
 }

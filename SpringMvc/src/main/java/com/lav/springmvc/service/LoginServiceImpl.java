@@ -2,19 +2,13 @@ package com.lav.springmvc.service;
 
 import org.springframework.stereotype.Service;
 
-@Service
+@Service("loginServiceImpl")
 public class LoginServiceImpl implements IUserService{
 	
-	String userName;
-
-	@Override
-	public void setUserName(String name) {
-		userName = name;		
+	public boolean proccess(String uName, String password) {
+		if ((uName.isEmpty() || uName.equals("null")) && (password.isEmpty() || password.equals("null"))){
+			return true;
+		}
+		return false;
 	}
-
-	@Override
-	public String displayUserName() {		
-		return userName;
-	}
-
 }

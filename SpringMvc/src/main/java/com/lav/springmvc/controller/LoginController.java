@@ -16,8 +16,13 @@ public class LoginController {
 	
 	@RequestMapping(value="/login" ,method = RequestMethod.GET)
 	public String login() {
-		login.setUserName("Raj");
-		System.out.println("User Name:"+login.displayUserName());		
-		return "Success";
+		if (login.proccess("Raj", "sam")) {
+			System.out.println("Sucess");		
+			return "success";
+		} else {
+			System.out.println("Failed");		
+			return "fail";
+		}
+		
 	}
 }
