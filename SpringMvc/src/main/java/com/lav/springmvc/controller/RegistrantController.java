@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.lav.sprinmvc.dto.StudentDTO;
+import com.lav.springmvc.dto.StudentDTO;
 
 @Controller
 public class RegistrantController {

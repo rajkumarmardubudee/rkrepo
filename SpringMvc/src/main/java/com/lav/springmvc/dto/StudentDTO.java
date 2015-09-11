@@ -1,4 +1,4 @@
-package com.lav.sprinmvc.dto;
+package com.lav.springmvc.dto;
 
 public class StudentDTO {
 	private int id;
